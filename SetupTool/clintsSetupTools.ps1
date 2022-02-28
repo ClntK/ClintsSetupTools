@@ -4,7 +4,8 @@
 # Author: Clint Kline
 # Purpose: -- A utility to automate common PC Setup tasks.
 
-# Set current users execution poicy to Unrestricted
+$currPath = Split-Path -Path $PSScriptRoot -Parent
+
 Set-ExecutionPolicy Unrestricted -Scope Process
 
 #------------------------------
@@ -13,16 +14,16 @@ Set-ExecutionPolicy Unrestricted -Scope Process
 Write-Output "MODULES: "
 
 # RenamePC Module
-Get-Item -Path .\RenamePC
-Import-Module .\RenamePC\RenamePC.psm1
+Get-Item -Path $currPath\SetupTool\RenamePC
+Import-Module $currPath\SetupTool\RenamePC\RenamePC.psm1
 
 # SetPassword Module
-Get-Item -Path .\CreatePassword
-Import-Module .\CreatePassword\CreatePassword.psm1
+Get-Item -Path $currPath\SetupTool\CreatePassword
+Import-Module $currPath\SetupTool\CreatePassword\CreatePassword.psm1
 
 # RenameFullName Module
-Get-Item -Path .\RenameFullName
-Import-Module .\RenameFullName\RenameFullName.psm1
+Get-Item -Path $currPath\SetupTool\RenameFullName
+Import-Module $currPath\SetupTool\RenameFullName\RenameFullName.psm1
 
 
 #-----------------------------------
