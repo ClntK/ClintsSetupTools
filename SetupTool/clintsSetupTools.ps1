@@ -4,6 +4,8 @@
 # Author: Clint Kline
 # Purpose: -- A utility to automate common PC Setup tasks.
 
+# Set current users execution poicy to Unrestricted
+Set-ExecutionPolicy Unrestricted -Scope Process
 
 #------------------------------
 # IMPORT MODULES
