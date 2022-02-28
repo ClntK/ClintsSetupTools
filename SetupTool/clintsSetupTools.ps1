@@ -6,7 +6,7 @@
 
 $currPath = Split-Path -Path $PSScriptRoot -Parent
 
-Set-ExecutionPolicy Unrestricted -Scope Process
+powershell.exe Set-ExecutionPolicy Unrestricted -Scope Process
 
 #------------------------------
 # IMPORT MODULES
