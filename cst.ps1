@@ -41,9 +41,13 @@ function ImportModules() {
     Get-Item -Path $filepath\SetupTool` Merge\RenamePC
     Import-Module $filepath\SetupTool` Merge\RenamePC\RenamePC.psm1
 
+    # NewUser Module
+    Get-Item -Path $filepath\SetupTool` Merge\NewUser
+    Import-Module $filepath\SetupTool` Merge\NewUser\NewUser.psm1
+    
     # SetPassword Module
-    Get-Item -Path $filepath\SetupTool` Merge\CreatePassword
-    Import-Module $filepath\SetupTool` Merge\CreatePassword\CreatePassword.psm1
+    Get-Item -Path $filepath\SetupTool` Merge\ResetPassword
+    Import-Module $filepath\SetupTool` Merge\ResetPassword\ResetPassword.psm1
 
     # RenameDomain Module
     Get-Item -Path $filepath\SetupTool` Merge\RenameDomain
@@ -170,13 +174,13 @@ function Set-Options($choiceList) {
                         Write-Host $desc
                         # call AllOfEm function from module 
                         AllOfEm
+                    }
                     12 {
                         $desc =">> Elevating..."
                         Write-Host "`r`n"
                         Write-Host $desc
                         # call ElevateCmd function from module
                         ElevateCmd
-                    }
                     }
                     Default { Write-Host "...that is some invalid input", ReRun }
                     
