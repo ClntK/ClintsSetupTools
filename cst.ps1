@@ -334,7 +334,8 @@ function LaunchPad() {
     # display available options
     Write-Host " 1. Change PC Name" 
     Write-Host "`n 2. Change Domain Name" 
-    Write-Host "`n 3. Reset User Password" 
+    Write-Host "`n 3. Create New User"     
+    Write-Host "`n 4. Reset User Password"     
     Write-Host "`n 4. Set Current Network to Private" 
     Write-Host "`n 5. Numlock Default ON at Startup"
     Write-Host "`n 6. Disable User Account Control"
